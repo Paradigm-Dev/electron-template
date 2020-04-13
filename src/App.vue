@@ -1,19 +1,20 @@
 <template>
-  <v-app dark>
+  <v-app>
     <!-- System toolbar -->
-    <v-system-bar app window style="-webkit-app-region: drag;" class="blue darken-4">
-      <span class="font-weight-light grey--text lighten-4">Any text that you want here</span>
+    <v-system-bar v-if="process.platform == 'win32'" app window style="-webkit-app-region: drag;" class="deep-purple elevation-4">
+      <img @click.left="reload()" src="./assets/logo.png" height="18" style="margin-right: 4px;">
+      <span style="margin-right: 4px">Electron Template</span>
       <v-spacer></v-spacer>
-      <div class="centralize">
-        <img src="./assets/logo.png" height="18" style="position: relative; top: +2px; margin-right: 5px;">
-        <span>AppName</span>
-      </div>
-      <v-spacer></v-spacer>
-      <div style="-webkit-app-region: no-drag; position: relative; top: +1px;">
+      <div style="-webkit-app-region: no-drag;" class="mr-n2">
         <v-icon @click="minimize()" v-ripple class="appbar-icon">mdi-minus</v-icon>
         <v-icon @click="maximized ? unmaximize() : maximize()" v-ripple class="appbar-icon">mdi-crop-square</v-icon>
         <v-icon @click="close()" v-ripple class="appbar-icon">mdi-close</v-icon>
       </div>
+    </v-system-bar>
+
+    <v-system-bar v-if="process.platform == 'darwin'" app window style="-webkit-app-region: drag;" height="38" class="deep-purple elevation-4">
+      <img @click.left="reload()" src="./assets/logo.png" height="18" style="margin: 2px 4px 0px 70px;">
+      <span style="margin-right: 4px">Electron Template</span>
     </v-system-bar>
 
 		<!-- Site content -->
@@ -38,7 +39,8 @@ export default {
 	data() {
 		return {
 			win: remote.getCurrentWindow(),
-      maximized: remote.getCurrentWindow().isMaximized()
+      maximized: remote.getCurrentWindow().isMaximized(),
+      process: process
 		}
 	},
   methods: {
