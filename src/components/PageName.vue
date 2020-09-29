@@ -18,24 +18,138 @@
           <v-btn v-on="on" icon><v-icon>mdi-format-text-variant</v-icon></v-btn>
         </template>
         <v-list dense>
-          <v-list-item @click="data.blocks.push({ type: 'text', content: '', format: { b: false, i: false, ul: false, str: false, ol: false, align: 'left', font: 'Roboto', color: '#FFFFFF', just: 'top' }, index: data.blocks.length, rows: 3 })">
-            <v-list-item-title><v-icon>mdi-format-paragraph</v-icon></v-list-item-title>
+          <v-list-item
+            @click="
+              data.blocks.push({
+                type: 'text',
+                content: '',
+                format: {
+                  b: false,
+                  i: false,
+                  ul: false,
+                  str: false,
+                  ol: false,
+                  align: 'left',
+                  font: 'Roboto',
+                  color: '#FFFFFF',
+                  just: 'top',
+                },
+                index: data.blocks.length,
+                rows: 3,
+              })
+            "
+          >
+            <v-list-item-title
+              ><v-icon>mdi-format-paragraph</v-icon></v-list-item-title
+            >
           </v-list-item>
 
-          <v-list-item @click="data.blocks.push({ type: 'header', content: '', format: { b: false, i: false, ul: false, str: false, ol: false, align: 'left', font: 'Roboto', color: '#FFFFFF', just: 'top' }, index: data.blocks.length, size: 1, rows: 1 })">
-            <v-list-item-title><v-icon>mdi-format-header-1</v-icon></v-list-item-title>
+          <v-list-item
+            @click="
+              data.blocks.push({
+                type: 'header',
+                content: '',
+                format: {
+                  b: false,
+                  i: false,
+                  ul: false,
+                  str: false,
+                  ol: false,
+                  align: 'left',
+                  font: 'Roboto',
+                  color: '#FFFFFF',
+                  just: 'top',
+                },
+                index: data.blocks.length,
+                size: 1,
+                rows: 1,
+              })
+            "
+          >
+            <v-list-item-title
+              ><v-icon>mdi-format-header-1</v-icon></v-list-item-title
+            >
           </v-list-item>
 
-          <v-list-item @click="data.blocks.push({ type: 'header', content: '', format: { b: false, i: false, ul: false, str: false, ol: false, align: 'left', font: 'Roboto', color: '#FFFFFF', just: 'top' }, index: data.blocks.length, size: 2, rows: 1 })">
-            <v-list-item-title><v-icon>mdi-format-header-2</v-icon></v-list-item-title>
+          <v-list-item
+            @click="
+              data.blocks.push({
+                type: 'header',
+                content: '',
+                format: {
+                  b: false,
+                  i: false,
+                  ul: false,
+                  str: false,
+                  ol: false,
+                  align: 'left',
+                  font: 'Roboto',
+                  color: '#FFFFFF',
+                  just: 'top',
+                },
+                index: data.blocks.length,
+                size: 2,
+                rows: 1,
+              })
+            "
+          >
+            <v-list-item-title
+              ><v-icon>mdi-format-header-2</v-icon></v-list-item-title
+            >
           </v-list-item>
 
-          <v-list-item @click="data.blocks.push({ type: 'header', content: '', format: { b: false, i: false, ul: false, str: false, ol: false, align: 'left', font: 'Roboto', color: '#FFFFFF', just: 'top' }, index: data.blocks.length, size: 3, rows: 1 })">
-            <v-list-item-title><v-icon>mdi-format-header-3</v-icon></v-list-item-title>
+          <v-list-item
+            @click="
+              data.blocks.push({
+                type: 'header',
+                content: '',
+                format: {
+                  b: false,
+                  i: false,
+                  ul: false,
+                  str: false,
+                  ol: false,
+                  align: 'left',
+                  font: 'Roboto',
+                  color: '#FFFFFF',
+                  just: 'top',
+                },
+                index: data.blocks.length,
+                size: 3,
+                rows: 1,
+              })
+            "
+          >
+            <v-list-item-title
+              ><v-icon>mdi-format-header-3</v-icon></v-list-item-title
+            >
           </v-list-item>
 
-          <v-list-item @click="data.blocks.push({ type: 'header', content: '', format: { b: false, i: false, ul: false, str: false, ol: false, align: 'left', font: 'Roboto', color: '#FFFFFF', just: 'top' }, index: data.blocks.length, size: 4, rows: 1 })">
-            <v-list-item-title><v-icon>mdi-format-header-4</v-icon></v-list-item-title>
+          <v-list-item
+            @click="
+              data.blocks.push({
+                type: 'header',
+                content: '',
+                format: {
+                  b: false,
+                  i: false,
+                  ul: false,
+                  str: false,
+                  ol: false,
+                  align: 'left',
+                  font: 'Roboto',
+                  color: '#FFFFFF',
+                  just: 'top',
+                },
+                index: data.blocks.length,
+                size: 4,
+                rows: 1,
+              })
+            "
+          >
+            <v-list-item-title
+              ><v-icon>mdi-format-header-4</v-icon></v-list-item-title
+            >
           </v-list-item>
         </v-list>
       </v-menu>
@@ -50,16 +164,16 @@
 
 <script>
 export default {
-  name: 'PageName',
+  name: "PageName",
   data() {
     return {
       // Page data
-    }
+    };
   },
   methods: {
     // Page functions
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
